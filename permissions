@@ -1,9 +1,11 @@
+#!/bin/bash
 chmod -c 755 boot/grub/mkconfig
 chmod -c 600 etc/default/grub
 chmod -c 644 etc/issue
 chmod -c 644 etc/locale.conf
 chmod -c 644 etc/locale.gen
 chmod -c 644 etc/nanorc
+chmod -c 644 etc/vimrc
 chmod -c 700 etc/skel/.bash_aliases
 chmod -c 700 etc/skel/.bash_logout
 chmod -c 700 etc/skel/.bash_profile
