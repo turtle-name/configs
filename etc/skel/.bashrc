@@ -9,7 +9,7 @@ HISTFILE=~/.bash_history
 HISTSIZE=100000
 HISTFILESIZE=1000000
 GLOBIGNORE=.:..
-export EDITOR=/usr/bin/nano
+export EDITOR=/usr/bin/vim
 PROMPT_COMMAND=
 PS0=
 PS1='\[\e]2;\u \w\a\]\[\e[0;2;37m\]`RETVAL=$?;[[ $RETVAL -ne 0 && $RETVAL -ne 130 ]] && printf %s "$RETVAL ";unset RETVAL`\[\e[0;38;5;10m\e]11;#12141f\a\]\u\[\e[0;38;5;14m\] \w\[\e[0;37m\] > \[\e[0m\]'
