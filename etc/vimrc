@@ -4,3 +4,9 @@ set tabstop=4
 set showcmd
 set cursorline
 set wildmenu
+set incsearch
+set hlsearch
+set foldenable
+set foldlevelstart=10
+set foldmethod=indent
+
