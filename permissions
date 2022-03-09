@@ -26,4 +26,6 @@ chmod -c 700 home/mekb/
 chmod -c 755 home/mekb/.config/
 chmod -c 755 home/mekb/.config/kitty/
 chmod -c 644 home/mekb/.config/kitty/kitty.conf
+chmod -c 755 home/mekb/.config/flameshot/
+chmod -c 644 home/mekb/.config/flameshot/flameshot.ini
 chmod -c 644 home/mekb/.XCompose
