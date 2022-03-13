@@ -16,4 +16,5 @@ PS1='\[\e]2;\u \w\a\]\[\e[0;2;37m\]`RETVAL=$?;[[ $RETVAL -ne 0 && $RETVAL -ne 13
 PS2="\[\e[0;37m\]> \[\e[0m\]"
 . ~/.bash_aliases&>/dev/null
 [[ -f /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion
+export GPG_TTY=$(tty)
 /bin/true
