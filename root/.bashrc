@@ -2,7 +2,7 @@
 [[ $- != *i* ]] && return
 HISTCONTROL=ignoreboth
 [[ $DISPLAY ]] && shopt -s checkwinsize
-umask 077
+umask 022
 shopt -s histappend
 shopt -s globstar
 HISTFILE=/dev/null
