@@ -9,6 +9,7 @@ set foldenable
 set foldlevelstart=10
 set foldmethod=indent
 map  :set relativenumber!
-map  il
+map  il
+map  i
 map  :let @/ = ""
 map  i
