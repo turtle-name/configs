@@ -5,9 +5,9 @@ HISTCONTROL=ignoreboth
 umask 022
 shopt -s histappend
 shopt -s globstar
-HISTFILE=/dev/null
-HISTSIZE=10000
-HISTFILESIZE=0
+HISTFILE=~/.bash_history
+HISTSIZE=100000
+HISTFILESIZE=1000000
 GLOBIGNORE=.:..
 export EDITOR=/usr/bin/vim
 PROMPT_COMMAND=
