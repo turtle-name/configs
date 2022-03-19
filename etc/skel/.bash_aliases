@@ -38,11 +38,6 @@ function pacman(){
 	fi
 }
 alias systemctl='sudo systemctl'
-alias mount='sudo mount'
-alias umount='sudo umount'
-alias fdisk='sudo fdisk'
-alias cfdisk='sudo cfdisk'
-alias unmount='umount'
 function reset(){
 	printf "\x1b[H\x1b[2J\x1b[3J\x1bc\x1b]104\x1b[!p\x1b[?3;4l\x1b[4l\x1b>\x1b[?69l"
 }
