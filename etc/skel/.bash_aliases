@@ -23,9 +23,20 @@ alias reboot='sudo reboot'
 function pacman(){
 	unset NEEDS_ROOT
 	for arg in $*; do
+		if [[ "$arg" == "--" ]]; then break; fi
 		if [[ "$arg" == -* ]]; then
-			if [[ "$arg" == *D* || "$arg" == *R* || "$arg" == *S* || "$arg" == *U* ]]; then
-				NEEDS_ROOT=true
+			if [[ "$arg" != *h* && "$arg" != "--help" ]]; then
+				if [[ "$arg" == *D* || "$arg" == "--database" ]]; then
+					NEEDS_ROOT=true
+				elif [[ "$arg" != *p* && "$arg" != "--print" ]]; then
+					if   [[ "$arg" == *R* || "$arg" == "--remove" ]]; then
+						NEEDS_ROOT=true
+					elif [[ "$arg" == *S* || "$arg" == "--sync" ]]; then
+						NEEDS_ROOT=true
+					elif [[ "$arg" == *U* || "$arg" == "--upgrade" ]]; then
+						NEEDS_ROOT=true
+					fi
+				fi
 			fi
 		fi
 	done
