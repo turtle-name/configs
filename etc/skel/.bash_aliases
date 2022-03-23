@@ -21,30 +21,44 @@ alias dmesg='sudo dmesg'
 alias poweroff='sudo poweroff'
 alias reboot='sudo reboot'
 function pacman(){
-	unset NEEDS_ROOT
+	unset PACMAN_SUDO_0
+	unset PACMAN_SUDO_1
+	unset PACMAN_SUDO_2
 	for arg in $*; do
 		if [[ "$arg" == "--" ]]; then break; fi
 		if [[ "$arg" == -* ]]; then
-			if [[ ! ( ( "$arg" == *h* && "$arg" != \-\-* ) || "$arg" == "--help" || "$arg" == "--hel" || "$arg" == "--he" ) ]]; then
-				if [[ ( "$arg" == *D* && "$arg" != \-\-* ) || "$arg" == "--database" || "$arg" == "--databas" || "$arg" == "--databa" || "$arg" == "--datab" || "$arg" == "--data" || "$arg" == "--dat" || "$arg" == "--da" ]]; then
-					NEEDS_ROOT=true
-				elif [[ ! ( ( "$arg" == *p* && "$arg" != \-\-* ) || "$arg" == "--print" ) ]]; then
-					if   [[ ( "$arg" == *R* && "$arg" != \-\-* ) || "$arg" == "--remove" || "$arg" == "--remov" || "$arg" == "--remo" || "$arg" == "--rem" ]]; then
-						NEEDS_ROOT=true
-					elif [[ ( "$arg" == *S* && "$arg" != \-\-* ) || "$arg" == "--sync" || "$arg" == "--syn" ]]; then
-						NEEDS_ROOT=true
-					elif [[ ( "$arg" == *U* && "$arg" != \-\-* ) || "$arg" == "--upgrade" ]]; then
-						NEEDS_ROOT=true
-					fi
-				fi
+			if   [[ ( "$arg" == *D* && "$arg" != \-\-* ) || "$arg" == "--database" || "$arg" == "--databas" || "$arg" == "--databa" || "$arg" == "--datab" || "$arg" == "--data" || "$arg" == "--dat" || "$arg" == "--da" ]]; then
+				if [[ -z "$PACMAN_SUDO_0" ]]; then PACMAN_SUDO_0=true; else PACMAN_SUDO_0=false; fi
+			fi
+			if [[ ( "$arg" == *R* && "$arg" != \-\-* ) || "$arg" == "--remove" || "$arg" == "--remov" || "$arg" == "--remo" || "$arg" == "--rem" ]]; then
+				if [[ -z "$PACMAN_SUDO_0" ]]; then PACMAN_SUDO_0=true; else PACMAN_SUDO_0=false; fi
+				PACMAN_SUDO_1=true
+			fi
+			if [[ ( "$arg" == *S* && "$arg" != \-\-* ) || "$arg" == "--sync" || "$arg" == "--syn" ]]; then
+				if [[ -z "$PACMAN_SUDO_0" ]]; then PACMAN_SUDO_0=true; else PACMAN_SUDO_0=false; fi
+				PACMAN_SUDO_1=true
+			fi
+			if [[ ( "$arg" == *U* && "$arg" != \-\-* ) || "$arg" == "--upgrade" ]]; then
+				if [[ -z "$PACMAN_SUDO_0" ]]; then PACMAN_SUDO_0=true; else PACMAN_SUDO_0=false; fi
+				PACMAN_SUDO_1=true
+			fi
+			if [[ ( "$arg" == *h* && "$arg" != \-\-* ) || "$arg" == "--help" || "$arg" == "--hel" || "$arg" == "--he" ]]; then
+				PACMAN_SUDO_0=false
+			fi
+			if [[ ( "$arg" == *p* && "$arg" != \-\-* ) || "$arg" == "--print" ]]; then
+				PACMAN_SUDO_2=true
 			fi
 		fi
 	done
-	if [[ $NEEDS_ROOT == true ]]; then
-		unset NEEDS_ROOT
+	if [[ $PACMAN_SUDO_1 == true && $PACMAN_SUDO_2 == true ]]; then
+		echo unset
+		unset PACMAN_SUDO_0
+	fi
+	if [[ $PACMAN_SUDO_0 == true ]]; then
+		unset PACMAN_SUDO_0
 		sudo pacman $*
 	else
-		unset NEEDS_ROOT
+		unset PACMAN_SUDO_0
 		env pacman $*
 	fi
 }
