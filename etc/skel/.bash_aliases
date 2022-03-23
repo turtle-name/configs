@@ -25,15 +25,15 @@ function pacman(){
 	for arg in $*; do
 		if [[ "$arg" == "--" ]]; then break; fi
 		if [[ "$arg" == -* ]]; then
-			if [[ "$arg" != *h* && "$arg" != "--help" ]]; then
-				if [[ "$arg" == *D* || "$arg" == "--database" ]]; then
+			if [[ ! ( ( "$arg" == *h* && "$arg" != \-\-* ) || "$arg" == "--help" || "$arg" == "--hel" || "$arg" == "--he" ) ]]; then
+				if [[ ( "$arg" == *D* && "$arg" != \-\-* ) || "$arg" == "--database" || "$arg" == "--databas" || "$arg" == "--databa" || "$arg" == "--datab" || "$arg" == "--data" || "$arg" == "--dat" || "$arg" == "--da" ]]; then
 					NEEDS_ROOT=true
-				elif [[ "$arg" != *p* && "$arg" != "--print" ]]; then
-					if   [[ "$arg" == *R* || "$arg" == "--remove" ]]; then
+				elif [[ ! ( ( "$arg" == *p* && "$arg" != \-\-* ) || "$arg" == "--print" ) ]]; then
+					if   [[ ( "$arg" == *R* && "$arg" != \-\-* ) || "$arg" == "--remove" || "$arg" == "--remov" || "$arg" == "--remo" || "$arg" == "--rem" ]]; then
 						NEEDS_ROOT=true
-					elif [[ "$arg" == *S* || "$arg" == "--sync" ]]; then
+					elif [[ ( "$arg" == *S* && "$arg" != \-\-* ) || "$arg" == "--sync" || "$arg" == "--syn" ]]; then
 						NEEDS_ROOT=true
-					elif [[ "$arg" == *U* || "$arg" == "--upgrade" ]]; then
+					elif [[ ( "$arg" == *U* && "$arg" != \-\-* ) || "$arg" == "--upgrade" ]]; then
 						NEEDS_ROOT=true
 					fi
 				fi
