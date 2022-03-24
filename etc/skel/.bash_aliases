@@ -24,6 +24,8 @@ function pacman(){
 	unset PACMAN_SUDO_0
 	unset PACMAN_SUDO_1
 	unset PACMAN_SUDO_2
+	unset PACMAN_SUDO_3
+	unset PACMAN_SUDO_4
 	for arg in $*; do
 		if [[ "$arg" == "--" ]]; then break; fi
 		if [[ "$arg" == -* ]]; then
@@ -42,6 +44,12 @@ function pacman(){
 				if [[ -z "$PACMAN_SUDO_0" ]]; then PACMAN_SUDO_0=true; else PACMAN_SUDO_0=false; fi
 				PACMAN_SUDO_1=true
 			fi
+			if [[ ( "$arg" == *F* && "$arg" != \-\-* ) || "$arg" == "--files" ]]; then
+				PACMAN_SUDO_3=true
+			fi
+			if [[ ( "$arg" == *y* && "$arg" != \-\-* ) || "$arg" == "--refresh" || "$arg" == "--refres" || "$arg" == "--refre" || "$arg" == "--refr" || "$arg" == "--ref" ]]; then
+				PACMAN_SUDO_4=true
+			fi
 			if [[ ( "$arg" == *h* && "$arg" != \-\-* ) || "$arg" == "--help" || "$arg" == "--hel" || "$arg" == "--he" ]]; then
 				PACMAN_SUDO_0=false
 			fi
@@ -50,6 +58,9 @@ function pacman(){
 			fi
 		fi
 	done
+	if [[ $PACMAN_SUDO_3 == true && $PACMAN_SUDO_4 == true ]]; then
+		if [[ -z "$PACMAN_SUDO_0" ]]; then PACMAN_SUDO_0=true; else PACMAN_SUDO_0=false; fi
+	fi
 	if [[ $PACMAN_SUDO_1 == true && $PACMAN_SUDO_2 == true ]]; then
 		echo unset
 		unset PACMAN_SUDO_0
