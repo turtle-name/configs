@@ -62,7 +62,6 @@ function pacman(){
 		if [[ -z "$PACMAN_SUDO_0" ]]; then PACMAN_SUDO_0=true; else PACMAN_SUDO_0=false; fi
 	fi
 	if [[ $PACMAN_SUDO_1 == true && $PACMAN_SUDO_2 == true ]]; then
-		echo unset
 		unset PACMAN_SUDO_0
 	fi
 	if [[ $PACMAN_SUDO_0 == true ]]; then
