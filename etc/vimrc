@@ -1,3 +1,11 @@
+nmap  :set nowrap!
+nmap  :set relativenumber!
+nmap  il
+nmap  i
+nmap  :let @/ = ""
+nmap  i
+imap . 
+imap , 
 set number
 syntax on
 set tabstop=4
@@ -8,9 +16,3 @@ set hlsearch
 set foldenable
 set foldlevelstart=10
 set foldmethod=indent
-map  :set nowrap!
-map  :set relativenumber!
-map  il
-map  i
-map  :let @/ = ""
-map  i
