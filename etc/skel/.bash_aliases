@@ -26,6 +26,8 @@ function pacman(){
 	unset PACMAN_SUDO_2
 	unset PACMAN_SUDO_3
 	unset PACMAN_SUDO_4
+	unset PACMAN_SUDO_5
+	unset PACMAN_SUDO_6
 	for arg in $*; do
 		if [[ "$arg" == "--" ]]; then break; fi
 		if [[ "$arg" == -* ]]; then
@@ -38,7 +40,20 @@ function pacman(){
 			fi
 			if [[ ( "$arg" == *S* && "$arg" != \-\-* ) || "$arg" == "--sync" || "$arg" == "--syn" ]]; then
 				if [[ -z "$PACMAN_SUDO_0" ]]; then PACMAN_SUDO_0=true; else PACMAN_SUDO_0=false; fi
+				PACMAN_SUDO_5=true
 				PACMAN_SUDO_1=true
+			fi
+			if [[ ( "$arg" == *g* && "$arg" != \-\-* ) || "$arg" == "--groups" || "$arg" == "--group" || "$arg" == "--grou" || "$arg" == "--gro" || "$arg" == "--gr" || "$arg" == "--g" ]]; then
+				PACMAN_SUDO_6=true
+			fi
+			if [[ ( "$arg" == *i* && "$arg" != \-\-* ) || "$arg" == "--info" || "$arg" == "--inf" || "$arg" == "--in" ]]; then
+				PACMAN_SUDO_6=true
+			fi
+			if [[ ( "$arg" == *i* && "$arg" != \-\-* ) || "$arg" == "--list" || "$arg" == "--lis" || "$arg" == "--li" ]]; then
+				PACMAN_SUDO_6=true
+			fi
+			if [[ ( "$arg" == *g* && "$arg" != \-\-* ) || "$arg" == "--search" || "$arg" == "--searc" || "$arg" == "--sear" || "$arg" == "--sea" || "$arg" == "--se" ]]; then
+				PACMAN_SUDO_6=true
 			fi
 			if [[ ( "$arg" == *U* && "$arg" != \-\-* ) || "$arg" == "--upgrade" ]]; then
 				if [[ -z "$PACMAN_SUDO_0" ]]; then PACMAN_SUDO_0=true; else PACMAN_SUDO_0=false; fi
@@ -60,6 +75,9 @@ function pacman(){
 	done
 	if [[ $PACMAN_SUDO_3 == true && $PACMAN_SUDO_4 == true ]]; then
 		if [[ -z "$PACMAN_SUDO_0" ]]; then PACMAN_SUDO_0=true; else PACMAN_SUDO_0=false; fi
+	fi
+	if [[ $PACMAN_SUDO_5 == true && $PACMAN_SUDO_6 == true ]]; then
+		PACMAN_SUDO_0=false
 	fi
 	if [[ $PACMAN_SUDO_1 == true && $PACMAN_SUDO_2 == true ]]; then
 		unset PACMAN_SUDO_0
