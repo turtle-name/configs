@@ -49,10 +49,10 @@ function pacman(){
 			if [[ ( "$arg" == *i* && "$arg" != \-\-* ) || "$arg" == "--info" || "$arg" == "--inf" || "$arg" == "--in" ]]; then
 				PACMAN_SUDO_6=true
 			fi
-			if [[ ( "$arg" == *i* && "$arg" != \-\-* ) || "$arg" == "--list" || "$arg" == "--lis" || "$arg" == "--li" ]]; then
+			if [[ ( "$arg" == *l* && "$arg" != \-\-* ) || "$arg" == "--list" || "$arg" == "--lis" || "$arg" == "--li" ]]; then
 				PACMAN_SUDO_6=true
 			fi
-			if [[ ( "$arg" == *g* && "$arg" != \-\-* ) || "$arg" == "--search" || "$arg" == "--searc" || "$arg" == "--sear" || "$arg" == "--sea" || "$arg" == "--se" ]]; then
+			if [[ ( "$arg" == *s* && "$arg" != \-\-* ) || "$arg" == "--search" || "$arg" == "--searc" || "$arg" == "--sear" || "$arg" == "--sea" || "$arg" == "--se" ]]; then
 				PACMAN_SUDO_6=true
 			fi
 			if [[ ( "$arg" == *U* && "$arg" != \-\-* ) || "$arg" == "--upgrade" ]]; then
