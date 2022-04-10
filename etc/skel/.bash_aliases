@@ -89,6 +89,13 @@ function pacman(){
 		unset PACMAN_SUDO_0
 		env pacman $*
 	fi
+	unset PACMAN_SUDO_0
+	unset PACMAN_SUDO_1
+	unset PACMAN_SUDO_2
+	unset PACMAN_SUDO_3
+	unset PACMAN_SUDO_4
+	unset PACMAN_SUDO_5
+	unset PACMAN_SUDO_6
 }
 alias systemctl='sudo systemctl'
 function reset(){
