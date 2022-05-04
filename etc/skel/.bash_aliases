@@ -18,6 +18,7 @@ alias :q='exit'
 alias dmesg='sudo dmesg'
 alias poweroff='sudo poweroff'
 alias reboot='sudo reboot'
+alias ctl='sudo systemctl'
 function pacman(){
 	unset PACMAN_SUDO_0
 	unset PACMAN_SUDO_1
@@ -95,7 +96,6 @@ function pacman(){
 	unset PACMAN_SUDO_5
 	unset PACMAN_SUDO_6
 }
-alias systemctl='sudo systemctl'
 function reset(){
 	printf "\x1b[H\x1b[2J\x1b[3J\x1bc\x1b]104\x1b[!p\x1b[?3;4l\x1b[4l\x1b>\x1b[?69l"
 }
