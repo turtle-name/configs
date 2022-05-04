@@ -5,6 +5,7 @@ chmod -c 700 root/.bash_aliases
 chmod -c 700 root/.bashrc
 chmod -c 700 root/.bash_logout
 chmod -c 700 home/mekb/
+chmod -c 600 home/mekb/.xinitrc
 chmod -c 644 home/mekb/.gtkrc-2.0
 chmod -c 644 home/mekb/.XCompose
 chmod -c 755 home/mekb/.config/
