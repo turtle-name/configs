@@ -9,8 +9,7 @@ chmod -c 600 home/mekb/.xinitrc
 chmod -c 644 home/mekb/.gtkrc-2.0
 chmod -c 644 home/mekb/.XCompose
 chmod -c 755 home/mekb/.config/
-chmod -c 755 home/mekb/.config/dunst/
-chmod -c 644 home/mekb/.config/dunst/dunstrc
+chmod -c 644 home/mekb/.config/picom.conf
 chmod -c 755 home/mekb/.config/fontconfig/
 chmod -c 644 home/mekb/.config/fontconfig/fonts.conf
 chmod -c 755 home/mekb/.config/gtk-3.0/
@@ -22,6 +21,8 @@ chmod -c 644 home/mekb/.config/flameshot/flameshot.ini
 chmod -c 755 home/mekb/.config/gtk-2.0/
 chmod -c 644 home/mekb/.config/gtk-2.0/gtkfilechooser.ini
 chmod -c 644 home/mekb/.config/gtk-2.0/gtkrc
+chmod -c 755 home/mekb/.config/dunst/
+chmod -c 644 home/mekb/.config/dunst/dunstrc
 chmod -c 755 home/mekb/.icons/
 chmod -c 755 home/mekb/.icons/default/
 chmod -c 644 home/mekb/.icons/default/index.theme
