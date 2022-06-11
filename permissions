@@ -43,6 +43,7 @@ chmod -c 700 etc/skel/.bashrc
 chmod -c 700 etc/skel/.bash_logout
 chmod -c 644 etc/skel/.inputrc
 chmod -c 644 etc/nanorc
+chmod -c 644 etc/profile
 chmod -c 644 etc/default/grub
 chmod -c 644 etc/vimrc
 chmod -c 644 etc/NetworkManager/NetworkManager.conf
