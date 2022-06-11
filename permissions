@@ -44,8 +44,12 @@ chmod -c 700 etc/skel/.bash_logout
 chmod -c 644 etc/skel/.inputrc
 chmod -c 644 etc/nanorc
 chmod -c 644 etc/profile
+chmod -c 755 etc/modprobe.d/
+chmod -c 644 etc/modprobe.d/blacklist.conf
+chmod -c 755 etc/default/
 chmod -c 644 etc/default/grub
 chmod -c 644 etc/vimrc
+chmod -c 755 etc/NetworkManager/
 chmod -c 644 etc/NetworkManager/NetworkManager.conf
 chmod -c 600 etc/sudoers.d/sudo\ \(with\ power\)
 chmod -c 600 etc/sudoers.d/sudo
