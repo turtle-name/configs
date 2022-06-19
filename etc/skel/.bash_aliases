@@ -21,7 +21,7 @@ alias restart='sudo do restart'
 alias suspend='sudo do suspend'
 alias poweroff='shutdown'
 alias reboot='restart'
-alias ctl='sudo systemctl'
+alias ctl='sudo dinitctl'
 function pacman(){
 	unset PACMAN_SUDO_0
 	unset PACMAN_SUDO_1

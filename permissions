@@ -42,6 +42,7 @@ chmod -c 644 etc/skel/.config/neofetch/config.conf
 chmod -c 700 etc/skel/.bashrc
 chmod -c 700 etc/skel/.bash_logout
 chmod -c 644 etc/skel/.inputrc
+chmod -c 644 etc/vconsole.conf
 chmod -c 644 etc/nanorc
 chmod -c 644 etc/profile
 chmod -c 755 etc/modprobe.d/
