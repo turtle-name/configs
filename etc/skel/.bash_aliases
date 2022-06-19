@@ -16,8 +16,11 @@ alias cd..='cd ..'
 alias sym='ln -s'
 alias :q='exit'
 alias dmesg='sudo dmesg'
-alias poweroff='sudo poweroff'
-alias reboot='sudo reboot'
+alias shutdown='sudo do shutdown'
+alias restart='sudo do restart'
+alias suspend='sudo do suspend'
+alias poweroff='shutdown'
+alias reboot='restart'
 alias ctl='sudo systemctl'
 function pacman(){
 	unset PACMAN_SUDO_0
