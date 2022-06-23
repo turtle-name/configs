@@ -23,3 +23,5 @@ desktop:
 things i typically do after setting up an artix install:
 
 * `rm -rfv /etc/bash`, it messes up my environment variables
+* edit `/etc/makepkg.conf` and set `MAKEFLAGS="-j4"` where 4 is what `nproc` returns
+* add `consolefont` hook to `/etc/mkinitcpio.conf`, and regenerate initramfs `mkinitcpio -P`
