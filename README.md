@@ -10,6 +10,7 @@ programs:
 * if ssh'ing into: terminfo for my terminal emulator
 * `gpm`, `gpm-vm`<sup>AUR</sup> if on VM
 * `rsync`
+* `exa`
 
 desktop:
 
