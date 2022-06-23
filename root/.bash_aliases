@@ -1,5 +1,9 @@
 #!/bin/bash
-alias exa='exa -hg --color=auto'
+if [[ "$TERM" != "linux" ]]; then
+	alias exa='exa -hg --color=auto --icons'
+else
+	alias exa='exa -hg --color=auto'
+fi
 alias ls='exa'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
