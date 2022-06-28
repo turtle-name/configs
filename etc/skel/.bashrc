@@ -17,6 +17,13 @@ PS0=
 PS1='\[\e]2;\u \w\a\]\[\e[0;2;37m\]`RETVAL=$?;[[ $RETVAL -ne 0 && $RETVAL -ne 130 ]] && printf %s "$RETVAL ";unset RETVAL`\[\e[0;38;5;10m\e]11;#0a0a0f\a\]\u\[\e[0;38;5;14m\] \w\[\e[0;37m\] > \[\e[0m\]'
 PS2="\[\e[0;37m\]> \[\e[0m\]"
 . ~/.bash_aliases&>/dev/null
-[[ -f /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion
+export PATH=$PATH:$HOME/.local/bin
+TMP_DIR="/tmp/env_$(id -u)"; mkdir -p -- "$TMP_DIR"; chmod 700 -- "$TMP_DIR"
+SSH_ENV="$TMP_DIR/ssh_env"; if [ ! -f "$SSH_ENV" ]; then /usr/bin/ssh-agent | sed "/^echo/d;s/;.*//" > "$SSH_ENV"; fi
+chmod 600 -- "$SSH_ENV"; export $(cat "$SSH_ENV")
+DBUS_ENV="$TMP_DIR/dbus_env"; if [ ! -f "$DBUS_ENV" ]; then dbus-launch > "$DBUS_ENV"; fi
+chmod 600 -- "$DBUS_ENV"; export $(cat "$DBUS_ENV")
+unset TMP_DIR SSH_ENV DBUS_ENV
 export GPG_TTY=$(tty)
+[[ -f /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion
 /bin/true
