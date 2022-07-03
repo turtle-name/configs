@@ -1,6 +1,7 @@
 #!/bin/bash
 if [[ "$TERM" != "linux" ]]; then
 	alias exa='exa -hg --color=auto --icons'
+	alias fetch='fetch -n'
 else
 	alias exa='exa -hg --color=auto'
 fi
