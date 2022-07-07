@@ -11,6 +11,7 @@ programs:
 * `gpm`, `gpm-vm`<sup>AUR</sup> if on VM
 * `rsync`
 * `exa`
+* `bash-completion`
 
 desktop:
 
