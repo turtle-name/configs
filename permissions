@@ -4,12 +4,17 @@ chmod -c 700 root/.bash_profile
 chmod -c 700 root/.bash_aliases
 chmod -c 700 root/.bashrc
 chmod -c 700 root/.bash_logout
+chmod -c 644 root/.inputrc
 chmod -c 700 home/mekb/
 chmod -c 600 home/mekb/.xinitrc
 chmod -c 644 home/mekb/.gtkrc-2.0
+chmod -c 644 home/mekb/.Xresources
 chmod -c 644 home/mekb/.XCompose
 chmod -c 755 home/mekb/.config/
+chmod -c 644 home/mekb/.config/mimeapps.list
 chmod -c 644 home/mekb/.config/picom.conf
+chmod -c 755 home/mekb/.config/volumeicon/
+chmod -c 644 home/mekb/.config/volumeicon/volumeicon
 chmod -c 755 home/mekb/.config/fontconfig/
 chmod -c 644 home/mekb/.config/fontconfig/fonts.conf
 chmod -c 755 home/mekb/.config/gtk-3.0/
@@ -30,6 +35,8 @@ chmod -c 755 home/mekb/.icons/theme/
 chmod -c 755 home/mekb/.icons/theme/cursors/
 chmod -c 644 etc/locale.conf
 chmod -c 644 etc/locale.gen
+chmod -c 755 etc/ssh/
+chmod -c 644 etc/ssh/sshd_config
 chmod -c 644 etc/issue
 chmod -c 700 etc/skel/
 chmod -c 700 etc/skel/.bash_profile
@@ -52,5 +59,6 @@ chmod -c 644 etc/default/grub
 chmod -c 644 etc/vimrc
 chmod -c 755 etc/NetworkManager/
 chmod -c 644 etc/NetworkManager/NetworkManager.conf
+chmod -c 700 etc/sudoers.d/
 chmod -c 600 etc/sudoers.d/sudo\ \(with\ power\)
 chmod -c 600 etc/sudoers.d/sudo
