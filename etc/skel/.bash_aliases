@@ -5,6 +5,7 @@ if [[ "$TERM" != "linux" ]]; then
 else
 	alias exa='exa -hg --color=auto'
 fi
+alias less='less --RAW-CONTROL-CHARS'
 alias tree='exa --tree'
 alias ls='exa'
 alias grep='grep --color=auto'
