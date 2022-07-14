@@ -2,7 +2,7 @@ programs:
 
 * bootloader: `grub` `efibootmgr`
 * `git` `base-devel` (includes `sudo`)
-* `man-db` `man-pages`
+* `mandoc` `man-pages` (used to use `man-db` instead of `mandoc`)
 * for networking: `dhcpcd` in VMs, `networkmanager` on real computers
 * `neofetch`
 * `openssh`
