@@ -1,19 +1,43 @@
+" ctrl+O toggle wrap
 nmap  :set nowrap!
+" ctrl+P toggle relativenumber
 nmap  :set relativenumber!
+" backspace without insert mode
 nmap  il
-nmap  i
+" ctrl+backspace
+nmap  a
+" ctrl+/ reset search buffer
 nmap  :let @/ = ""
-nmap  i
-imap . 
-imap , 
+" only works in gvim
+" you don't need to use the GUI mode, just regular vim but gvim, which lets
+" clipboard work
+" ctrl+C copy from yank buffer to clipboard
+nmap  :let @+=@"
+" ctrl+V copy from yank buffer to clipboard
+nmap  :let @"=@+
+" ctrl+left/ctrl+right behave like left/right instead of moving word by word
+" instead of moving character by character
+nmap [1;5D OD
+nmap [1;5C OC
+" ctrl+up/ctrl+down already behave like g,up/g,down, but do it anyways so it's
+" not inconsistant with above two
+nmap [1;5A gOA
+nmap [1;5B gOB
+" show line number on current line
 set number
+" show relative line numbers, e.g 5, 4, 3, 2, 1, 541, 1, 2, 3, 4, 5
 set relativenumber
+" pretty obvious
 syntax on
-set tabstop=4
-set showcmd
+" tab width
+set tabstop=2
+" tab completion on :cmd thing
 set wildmenu
+" i forgor what these do lol
+set showcmd
 set incsearch
 set hlsearch
+" folding
 set foldenable
 set foldlevelstart=10
 set foldmethod=indent
