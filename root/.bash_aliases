@@ -1,9 +1,10 @@
 #!/bin/bash
 if [[ "$TERM" != "linux" ]]; then
 	alias exa='exa -hg --color=auto --icons'
-	alias fetch='fetch -n'
+	alias fetch='fetch -c -b -n'
 else
 	alias exa='exa -hg --color=auto'
+	alias fetch='fetch -c -b'
 fi
 alias less='less --RAW-CONTROL-CHARS'
 alias tree='exa --tree'
