@@ -4,7 +4,7 @@ if [[ "$TERM" != "linux" ]]; then
 	alias fetch='fetch -c -b -n'
 else
 	alias exa='exa -hg --color=auto'
-	alias fetch='fetch -c -b'
+	alias fetch='fetch -c -b -f'
 fi
 alias less='less --RAW-CONTROL-CHARS'
 alias tree='exa --tree'
