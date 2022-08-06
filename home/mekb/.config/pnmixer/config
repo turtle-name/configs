@@ -1,0 +1,31 @@
+[PNMixer]
+SliderOrientation=horizontal
+DisplayTextVolume=true
+TextVolumePosition=0
+ScrollStep=5
+FineScrollStep=1
+MiddleClickAction=2
+CustomCommand=
+VolMuteKey=84
+VolUpKey=80
+VolDownKey=88
+AlsaCard=HDA Intel PCH
+NormalizeVolume=true
+SystemTheme=true
+DrawVolMeter=true
+VolMeterPos=100
+VolMeterColor=0.7781829833984375;0.431365966796875;0.9097900390625;
+VolumeControlCommand=pavucontrol
+EnableHotKeys=false
+VolMuteMods=67108864
+VolUpMods=67108864
+VolDownMods=67108864
+EnableNotifications=true
+HotkeyNotifications=true
+MouseNotifications=true
+PopupNotifications=false
+ExternalNotifications=true
+NotificationTimeout=1500
+
+[HDA Intel PCH]
+Channel=Master

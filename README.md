@@ -6,7 +6,7 @@ programs:
 * for networking: `dhcpcd` in VMs, `networkmanager` on real computers
 * `neofetch`
 * `openssh`
-* text editor: `vim`
+* text editor: `vim` (used to use `nano`)
 * if ssh'ing into: terminfo for my terminal emulator
 * `gpm`, `gpm-vm`<sup>AUR</sup> if on VM
 * `rsync`
