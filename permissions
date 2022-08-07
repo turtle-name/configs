@@ -48,6 +48,8 @@ chmod -c 755 etc/skel/.config/neofetch/
 chmod -c 644 etc/skel/.config/neofetch/arch.png
 chmod -c 644 etc/skel/.config/neofetch/artix.png
 chmod -c 644 etc/skel/.config/neofetch/config.conf
+chmod -c 755 etc/skel/.config/paru/
+chmod -c 644 etc/skel/.config/paru/paru.conf
 chmod -c 700 etc/skel/.bashrc
 chmod -c 700 etc/skel/.bash_logout
 chmod -c 644 etc/skel/.inputrc

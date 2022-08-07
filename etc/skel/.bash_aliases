@@ -92,7 +92,8 @@ function pacman(){
 	fi
 	if [[ $PACMAN_SUDO_0 == true ]]; then
 		unset PACMAN_SUDO_0
-		sudo pacman $*
+		#sudo pacman $*
+		odus pacman $*
 	else
 		unset PACMAN_SUDO_0
 		env pacman $*
