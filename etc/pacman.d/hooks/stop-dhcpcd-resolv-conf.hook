@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = dhcpcd
+
+[Action]
+Description = Removing resolv.conf settings on dhcpcd
+When = PostTransaction
+Exec = /usr/bin/rm -v '/usr/lib/dhcpcd/dhcpcd-hooks/20-resolv.conf'
