@@ -68,5 +68,4 @@ chmod -c 644 etc/vimrc
 chmod -c 755 etc/NetworkManager/
 chmod -c 644 etc/NetworkManager/NetworkManager.conf
 chmod -c 700 etc/sudoers.d/
-chmod -c 600 etc/sudoers.d/sudo\ \(with\ power\)
 chmod -c 600 etc/sudoers.d/sudo
