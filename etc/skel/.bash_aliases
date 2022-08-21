@@ -21,13 +21,13 @@ alias vi='vim'
 alias cd..='cd ..'
 alias sym='ln -s'
 alias :q='exit'
-alias dmesg='sudo dmesg'
+alias dmesg='odus dmesg'
 alias shutdown='/usr/local/sbin/do shutdown'
 alias restart='/usr/local/sbin/do restart'
 alias suspend='/usr/local/sbin/do suspend'
 alias poweroff='shutdown'
 alias reboot='restart'
-alias ctl='sudo dinitctl'
+alias ctl='odus dinitctl'
 function pacman(){
 	unset PACMAN_SUDO_0
 	unset PACMAN_SUDO_1
