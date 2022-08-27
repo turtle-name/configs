@@ -91,13 +91,15 @@ function pacman(){
 	if [[ $PACMAN_SUDO_1 == true && $PACMAN_SUDO_2 == true ]]; then
 		unset PACMAN_SUDO_0
 	fi
+	unset PACMAN_SUDO_EXIT_CODE
 	if [[ $PACMAN_SUDO_0 == true ]]; then
 		unset PACMAN_SUDO_0
-		#sudo pacman $*
 		odus pacman $*
+		PACMAN_SUDO_EXIT_CODE=$?
 	else
 		unset PACMAN_SUDO_0
 		env pacman $*
+		PACMAN_SUDO_EXIT_CODE=$?
 	fi
 	unset PACMAN_SUDO_0
 	unset PACMAN_SUDO_1
@@ -106,6 +108,7 @@ function pacman(){
 	unset PACMAN_SUDO_4
 	unset PACMAN_SUDO_5
 	unset PACMAN_SUDO_6
+	return $PACMAN_SUDO_EXIT_CODE
 }
 function reset(){
 	printf "\x1b[H\x1b[2J\x1b[3J\x1bc\x1b]104\x1b[!p\x1b[?3;4l\x1b[4l\x1b>\x1b[?69l"
