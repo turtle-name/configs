@@ -1,4 +1,10 @@
 #!/bin/bash
+chmod -c 755 usr/
+chmod -c 755 usr/local/
+chmod -c 755 usr/local/share/
+chmod -c 755 usr/local/share/kbd/
+chmod -c 755 usr/local/share/kbd/keymaps/
+chmod -c 644 usr/local/share/kbd/keymaps/*.map
 chmod -c 700 root/
 chmod -c 700 root/.bash_profile
 chmod -c 700 root/.bash_aliases
