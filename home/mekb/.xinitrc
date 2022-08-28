@@ -22,4 +22,5 @@ fi
 cd
 xbacklight -set 100
 setxkbmap -option compose:ralt
+~/.azerty
 PATH=$PATH:$HOME/.local/bin exec ~/.local/bin/dwm
