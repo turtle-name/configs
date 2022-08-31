@@ -27,3 +27,4 @@ things i typically do after setting up an artix install:
 * edit `/etc/makepkg.conf` and set `MAKEFLAGS="-j4"` where 4 is what `nproc` returns
 * add `consolefont` hook to `/etc/mkinitcpio.conf`, and regenerate initramfs `mkinitcpio -P`
 * set `Color`, `ILoveCandy`, and `ParallelDownloads = 5` in `/etc/pacman.conf`
+* remove azerty in `/home/mekb/.xinitrc` and `/etc/vconsole.conf` if you don't use azerty
