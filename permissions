@@ -1,4 +1,6 @@
 #!/bin/bash
+chmod -c 755 boot/
+chmod -c 644 boot/limine.cfg
 chmod -c 755 usr/
 chmod -c 755 usr/local/
 chmod -c 755 usr/local/share/
@@ -51,6 +53,8 @@ chmod -c 644 etc/issue
 chmod -c 755 etc/pacman.d/
 chmod -c 755 etc/pacman.d/hooks
 chmod -c 644 etc/pacman.d/hooks/stop-dhcpcd-resolv-conf.hook
+chmod -c 644 etc/pacman.d/hooks/limine-uefi.hook
+chmod -c 644 etc/pacman.d/hooks/limine-bios.hook
 chmod -c 644 etc/dhcpcd.conf
 chmod -c 700 etc/skel/
 chmod -c 700 etc/skel/.bash_profile

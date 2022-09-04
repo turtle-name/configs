@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = limine
+
+[Action]
+Description = Deploying Limine...
+When = PostTransaction
+Exec = /bin/sh -c "limine-deploy /dev/sdX && cp /usr/share/limine/limine.sys /boot/"

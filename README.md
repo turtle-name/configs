@@ -1,6 +1,6 @@
 programs:
 
-* bootloader: `grub` `efibootmgr`
+* bootloader: `limine`<sup>AUR</sup> `efibootmgr` (used to use `grub` instead of `limine`<sup>AUR</sup>)
 * `git` `base-devel` (includes `sudo`)
 * `mandoc` `man-pages` (used to use `man-db` instead of `mandoc`)
 * iwd and dhcpcd (used to use `networkmanager`)
