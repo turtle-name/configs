@@ -25,6 +25,7 @@ append_path() {
 			PATH="${PATH:+$PATH:}$1"
 	esac
 }
+append_path "/usr/local/bin"
 append_path "$HOME/.local/bin"
 append_path "$HOME/.bin"
 export PATH

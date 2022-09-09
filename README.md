@@ -1,5 +1,6 @@
-programs:
+programs I use:
 
+* [`odus`](https://github.com/mekb-turtle/odus) [`do`](https://github.com/mekb-turtle/do) [`1`](https://github.com/mekb-turtle/1) (these are programs I've made)
 * bootloader: `limine`<sup>AUR</sup> `efibootmgr` (used to use `grub` instead of `limine`<sup>AUR</sup>)
 * `git` `base-devel` (includes `sudo`)
 * `mandoc` `man-pages` (used to use `man-db` instead of `mandoc`)
@@ -13,7 +14,7 @@ programs:
 * `exa`<sup>arch</sup>
 * `bash-completion`
 
-desktop:
+for desktop:
 
 * wm: `dwm`, also `slstatus`, `dmenu`, `slock`, (these aren't from AUR, they're built manually so I can tweak them, see [suckless](https://github.com/mekb-turtle/suckless))
 * theming: `yaru-colors-gtk-theme-git`<sup>AUR</sup> (Yaru-Lavender-dark), `deepin-icon-theme`<sup>arch</sup> (bloom-dark)
@@ -21,7 +22,7 @@ desktop:
 * terminal emulator: `kitty`
 * xorg: `xorg-server` `xorg-setxkbmap` `xorg-xev` `xorg-xinit` `xorg-xinput` `xorg-xmodmap` `xorg-xprop` `xorg-xset` `xorg-xsetroot` `xorg-xrandr`
 
-things i typically do after setting up an artix install:
+post-install for Artix install I do:
 
 * `rm -rfv /etc/bash`, it messes up my environment variables
 * edit `/etc/makepkg.conf` and set `MAKEFLAGS="-j4"` where 4 is what `nproc` returns
