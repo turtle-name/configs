@@ -13,6 +13,7 @@ programs I use:
 * `rsync`
 * `exa`<sup>arch</sup>
 * `bash-completion`
+* vconsole font: `terminus-font` (`ter-v22b`)
 
 for desktop:
 
