@@ -1,12 +1,6 @@
 #!/bin/bash
 chmod -c 755 boot/
 chmod -c 644 boot/limine.cfg
-chmod -c 755 usr/
-chmod -c 755 usr/local/
-chmod -c 755 usr/local/share/
-chmod -c 755 usr/local/share/kbd/
-chmod -c 755 usr/local/share/kbd/keymaps/
-chmod -c 644 usr/local/share/kbd/keymaps/*.map
 chmod -c 700 root/
 chmod -c 700 root/.bash_profile
 chmod -c 700 root/.bash_aliases
@@ -15,7 +9,6 @@ chmod -c 700 root/.bash_logout
 chmod -c 644 root/.inputrc
 chmod -c 700 home/mekb/
 chmod -c 644 home/mekb/.qwerty
-chmod -c 644 home/mekb/.azerty
 chmod -c 600 home/mekb/.xinitrc
 chmod -c 644 home/mekb/.gtkrc-2.0
 chmod -c 644 home/mekb/.Xresources

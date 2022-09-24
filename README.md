@@ -1,6 +1,6 @@
 programs I use:
 
-* [`odus`](https://github.com/mekb-turtle/odus) [`do`](https://github.com/mekb-turtle/do) [`1`](https://github.com/mekb-turtle/1) (these are programs I've made)
+* [`odus`](https://github.com/mekb-turtle/odus) [`do`](https://github.com/mekb-turtle/do) [`1`](https://github.com/mekb-turtle/1) [`todo`](https://github.com/mekb-turtle/todo) (these are programs I've made)
 * bootloader: `limine`<sup>AUR</sup> `efibootmgr` (used to use `grub` instead of `limine`<sup>AUR</sup>)
 * `git` `base-devel` (includes `sudo`)
 * `mandoc` `man-pages` (used to use `man-db` instead of `mandoc`)
