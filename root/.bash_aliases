@@ -24,6 +24,8 @@ alias :q='exit'
 alias shutdown='poweroff'
 alias restart='reboot'
 alias ctl='sudo dinitctl'
+alias odus='odus '
+alias sudo='odus '
 function reset(){
 	printf "\x1b[H\x1b[2J\x1b[3J\x1bc\x1b]104\x1b[!p\x1b[?3;4l\x1b[4l\x1b>\x1b[?69l"
 }

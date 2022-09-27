@@ -29,6 +29,20 @@ alias suspend2='/usr/local/sbin/do suspend2'
 alias poweroff='shutdown'
 alias reboot='restart'
 alias ctl='odus dinitctl'
+alias odus='odus '
+alias sudo='odus '
+alias clone='git clone'
+alias add='git add'
+alias grm='git rm --cached'
+alias gdiff='git diff'
+alias ginitdiff='git diff 4b825dc642cb6eb9a060e54bf8d69288fbee4904' # this is the commit ID of the "commit" before any commits
+alias glog='git log'
+alias gstatus='git status'
+alias commit='git commit -S'
+alias branch='git branch'
+alias push='git push'
+alias pull='git pull'
+alias checkout='git checkout'
 function pacman(){
 	unset PACMAN_SUDO_0
 	unset PACMAN_SUDO_1
