@@ -1,9 +1,9 @@
 #!/bin/bash
 if [[ "$TERM" != "linux" ]]; then
-	alias exa='exa -hg --color=auto --icons'
+	alias exa='exa -hg --color=auto --icons -b'
 	alias mekfetch='mekfetch -c -b -n'
 else
-	alias exa='exa -hg --color=auto'
+	alias exa='exa -hg --color=auto -b'
 	alias mekfetch='mekfetch -c -b -f'
 fi
 alias less='less --RAW-CONTROL-CHARS'
