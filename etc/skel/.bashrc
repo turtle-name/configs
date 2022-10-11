@@ -32,10 +32,9 @@ export PATH
 unset -f append_path
 TMP_DIR="/tmp/env_$(id -u)"; mkdir -p -- "$TMP_DIR"; chmod 700 -- "$TMP_DIR"
 SSH_ENV="$TMP_DIR/ssh_env"; if [ ! -f "$SSH_ENV" ]; then /usr/bin/ssh-agent | sed "/^echo/d;s/;.*//" > "$SSH_ENV"; fi
-chmod 600 -- "$SSH_ENV"; export $(cat "$SSH_ENV")
-DBUS_ENV="$TMP_DIR/dbus_env"; if [ ! -f "$DBUS_ENV" ]; then dbus-launch > "$DBUS_ENV"; fi
-chmod 600 -- "$DBUS_ENV"; export $(cat "$DBUS_ENV")
+chmod 600 -- "$SSH_ENV"; [[ -s "$SSH_ENV" ]] && IFS=$'\n' export $(cat "$SSH_ENV")
 unset TMP_DIR SSH_ENV DBUS_ENV
 export GPG_TTY=$(tty)
 [[ -f /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion
-[[ $DISPLAY ]] && setxkbmap -option compose:ralt
+[[ $DISPLAY ]] && setxkbmap -option compose:ralt >& /dev/null
+true
