@@ -14,7 +14,7 @@ export EXA_COLORS="ur=38;5;11:uw=38;5;9:ux=38;5;10:ue=38;5;10:gr=38;5;11:gw=38;5
 export EDITOR=/usr/bin/vim
 PROMPT_COMMAND=
 PS0=
-PS1='\[\e]2;\u \w\a\]\[\e[0;2;37m\]`RETVAL=$?;[[ $RETVAL -ne 0 && $RETVAL -ne 130 ]] && printf %s "$RETVAL ";unset RETVAL`\[\e[0;38;5;10m\e]11;#0a0a0f\a\]\u\[\e[0;38;5;14m\] `PWDHOME="$PWD";P="";[[ "$PWDHOME" == "$HOME"* ]] && PWDHOME="${PWDHOME/"$HOME"/"~"}";while [[ "${#PWDHOME}" -gt 48 ]];do P="...";PWDHOME="${PWDHOME#*\/}";done;printf "%s" "$P$PWDHOME"`\[\e[0;37m\] > \[\e[0m\]'
+PS1='\[\e]2;\u \w\a\]\[\e[0;2;37m\]`RETVAL=$?;[[ $RETVAL -ne 0 && $RETVAL -ne 130 ]] && printf %s "$RETVAL ";unset RETVAL`\[\e[0;38;5;10m\e]11;#0a0a0f\a\]\u\[\e[0;38;5;14m\] `PWDHOME="$PWD";P="";[[ "$PWDHOME" == "$HOME"* ]] && PWDHOME="${PWDHOME/"$HOME"/"~"}";while [[ "${#PWDHOME}" -gt 48 ]];do P=".../";PWDHOME="${PWDHOME#*\/}";done;printf "%s" "$P$PWDHOME"`\[\e[0;37m\] > \[\e[0m\]'
 PS2="\[\e[0;37m\]> \[\e[0m\]"
 . ~/.bash_aliases&>/dev/null
 append_path() {
